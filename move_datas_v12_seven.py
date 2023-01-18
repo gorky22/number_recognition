@@ -9,6 +9,7 @@ dataset_seven = 'seven_plastics'
 
 num_of_datas = {'1': 0, '2':0, '3':0, '4':0, '5':0, '6':0, '7':0, '8':0}
 
+# this function creates directories needed for easier loading 
 def create_dir_for_dataset():
     current_directory = os.getcwd()
     final_directory = os.path.join(current_directory, r'datasets')
@@ -28,7 +29,7 @@ def remove_str(str):
     return int(nums[0])
 
 
-
+## move -> separate dataset to appropriate dirrectories bolognese university
 def move_v12():
     # splitting data for getting just 1-7 labelled and added them to final folder dataset
     # !! note number 8 is included in folder negative 
@@ -45,7 +46,7 @@ def move_v12():
         num_of_datas[str(8)] +=1
 
 
-
+## move -> separate dataset to appropriate dirrectories kaggle
 def move_seven():
     for nums in  os.listdir(dataset_seven):
         actual_num  = nums.split('_')[0]
